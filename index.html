@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge Forms</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Formulario de registro</h1>
+  <p>Llena el formulario con la información requerida</p>
+  <form action="https://forms.larnu.com">
+    <fieldset>
+      <label for="">Nombre: <input type="text" required name="first-name"></label>
+      <label for="">Apellido: <input type="text" required name="last-name"></label>
+      <label for="">Email: <input type="email" required name="email"></label>
+      <label for="">Contraseña: <input type="password" required minlength="8" pattern="[a-z0-5]{8,}" name="password"></label>
+    </fieldset>
+    <fieldset>
+      <label for=""><input type="radio" name="account-type" class="inline"> Part time</label>
+      <label for=""><input type="radio" name="account-type" class="inline"> Full time</label>
+      <label for=""><input type="checkbox" required name="tyc" class="inline"> Acepto los <a href="https://www.larnu.com/terms-of-service/" target="_blank">terminos y condiciones</a></label>
+    </fieldset>
+    <fieldset>
+      <label for="">Sube una foto: <input type="file" name="profile-picture"></label>
+      <label for="">Tu edad: <input type="number" min="18" max="50" name="age"></label>
+      <label for="">Cómo oíste de nosotros
+        <select name="referrer" id="">
+          <option value="">(selecciona una)</option>
+          <option value="1">Redes sociales</option>
+          <option value="2">Amigos</option>
+          <option value="3">Noticias</option>
+          <option value="4">Otros</option>
+        </select>
+      </label>
+      <label for="">
+        Cuéntanos sobre ti:
+        <textarea cols="30" rows="3" placeholder="Me gusta programar porque ..." name="bio"></textarea>
+      </label>
+    </fieldset>
+    <input type="submit" value="Enviar">
+  </form>
+</body>
+</html>
